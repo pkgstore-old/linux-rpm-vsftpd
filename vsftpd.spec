@@ -106,7 +106,7 @@ Patch65:                        0001-Repeat-pututxline-until-it-succeeds-if-it-f
 Patch67:                        0001-Fix-timestamp-handling-in-MDTM.patch
 Patch68:                        0002-Drop-an-unused-global-variable.patch
 Patch69:                        0001-Remove-a-hint-about-the-ftp_home_dir-SELinux-boolean.patch
-Patch70:                        fix-str_open.patch
+# Patch70:                      fix-str_open.patch
 # Upstream commits 56402c0, 8b82e73.
 Patch71:                        vsftpd-3.0.3-enable_wc_logs-replace_unprintable_with_hex.patch
 
