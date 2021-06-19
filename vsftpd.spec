@@ -71,7 +71,7 @@ Patch29:                        0029-Fix-segfault-in-config-file-parser.patch
 Patch30:                        0030-Fix-logging-into-syslog-when-enabled-in-config.patch
 Patch31:                        0031-Fix-question-mark-wildcard-withing-a-file-name.patch
 Patch32:                        0032-Propagate-errors-from-nfs-with-quota-to-client.patch
-Patch33:                        0033-Introduce-TLSv1.1-and-TLSv1.2-options.patch
+# Patch33:                      0033-Introduce-TLSv1.1-and-TLSv1.2-options.patch
 Patch34:                        0034-Turn-off-seccomp-sandbox-because-it-is-too-strict.patch
 Patch35:                        0035-Modify-DH-enablement-patch-to-build-with-OpenSSL-1.1.patch
 Patch36:                        0036-Redefine-VSFTP_COMMAND_FD-to-1.patch
