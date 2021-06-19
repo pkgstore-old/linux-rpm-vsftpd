@@ -125,9 +125,9 @@ scratch.
 
 %build
 %ifarch s390x sparcv9 sparc64
-  %{make_build} CFLAGS="%{optflags} -fPIE -pipe -Wextra -Werror" \
+  %{make_build} CFLAGS="${RPM_OPT_FLAGS} -fPIE -pipe -Wextra -Werror" \
 %else
-  %{make_build} CFLAGS="%{optflags} -fpie -pipe -Wextra -Werror" \
+  %{make_build} CFLAGS="${RPM_OPT_FLAGS} -fpie -pipe -Wextra -Werror" \
 %endif
 LINK="-pie -lssl" %{?_smp_mflags}
 
