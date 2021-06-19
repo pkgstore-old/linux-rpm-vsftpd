@@ -21,7 +21,6 @@ Source7:                        vsftpd.service
 Source8:                        vsftpd@.service
 Source9:                        vsftpd.target
 Source10:                       vsftpd-generator
-
 # Signature.
 Source900:                      https://security.appspot.com/downloads/%{name}-%{version}.tar.gz.asc
 # SSL generator.
@@ -231,13 +230,13 @@ LINK="-pie -lssl" %{?_smp_mflags}
 - Removed a hint about the ftp_home_dir SELinux boolean from the config file
 - Resolves: rhbz#1623424
 
-* Fri Mar 13 2020 Package Store <pkgstore@pm.me> - 3.0.3-102
+* Fri Mar 13 2020 Package Store <kitsune.solar@gmail.com> - 3.0.3-102
 - UPD: master-9d90ef.
 
-* Thu Oct 03 2019 Package Store <pkgstore@pm.me> - 3.0.3-101
+* Thu Oct 03 2019 Package Store <kitsune.solar@gmail.com> - 3.0.3-101
 - UPD: master-6848e2.
 
-* Sat Jun 29 2019 Package Store <pkgstore@pm.me> - 3.0.3-100
+* Sat Jun 29 2019 Package Store <kitsune.solar@gmail.com> - 3.0.3-100
 - UPD: MARKETPLACE.
 
 * Mon Mar 25 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-32
