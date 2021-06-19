@@ -73,7 +73,7 @@ Patch31:                        0031-Fix-question-mark-wildcard-withing-a-file-n
 Patch32:                        0032-Propagate-errors-from-nfs-with-quota-to-client.patch
 # Patch33:                      0033-Introduce-TLSv1.1-and-TLSv1.2-options.patch
 Patch34:                        0034-Turn-off-seccomp-sandbox-because-it-is-too-strict.patch
-Patch35:                        0035-Modify-DH-enablement-patch-to-build-with-OpenSSL-1.1.patch
+# Patch35:                      0035-Modify-DH-enablement-patch-to-build-with-OpenSSL-1.1.patch
 Patch36:                        0036-Redefine-VSFTP_COMMAND_FD-to-1.patch
 Patch37:                        0037-Document-the-relationship-of-text_userdb_names-and-c.patch
 Patch38:                        0038-Document-allow_writeable_chroot-in-the-man-page.patch
