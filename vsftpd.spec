@@ -63,7 +63,7 @@ Patch20:                        0020-Use-unsigned-int-for-uid-and-gid-representa
 # Patch22:                      0022-Introduce-support-for-EDDHE-based-cipher-suites.patch
 Patch23:                        0023-Add-documentation-for-isolate_-options.-Correct-defa.patch
 Patch24:                        0024-Introduce-new-return-value-450.patch
-Patch25:                        0025-Improve-local_max_rate-option.patch
+# Patch25:                      0025-Improve-local_max_rate-option.patch
 Patch26:                        0026-Prevent-hanging-in-SIGCHLD-handler.patch
 Patch27:                        0027-Delete-files-when-upload-fails.patch
 Patch28:                        0028-Fix-man-page-rendering.patch
