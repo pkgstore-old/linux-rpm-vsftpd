@@ -59,7 +59,7 @@ Patch17:                        0017-Fix-an-issue-with-timestamps-during-DST.pat
 Patch18:                        0018-Change-the-default-log-file-in-configuration.patch
 Patch19:                        0019-Introduce-reverse_lookup_enable-option.patch
 Patch20:                        0020-Use-unsigned-int-for-uid-and-gid-representation.patch
-Patch21:                        0021-Introduce-support-for-DHE-based-cipher-suites.patch
+# Patch21:                      0021-Introduce-support-for-DHE-based-cipher-suites.patch
 Patch22:                        0022-Introduce-support-for-EDDHE-based-cipher-suites.patch
 Patch23:                        0023-Add-documentation-for-isolate_-options.-Correct-defa.patch
 Patch24:                        0024-Introduce-new-return-value-450.patch
