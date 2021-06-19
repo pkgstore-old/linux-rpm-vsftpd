@@ -81,7 +81,7 @@ Patch39:                        0039-Improve-documentation-of-ASCII-mode-in-the-
 # Patch40:                      0040-Use-system-wide-crypto-policy.patch
 # Patch41:                      0041-Document-the-new-default-for-ssl_ciphers-in-the-man-.patch
 Patch42:                        0042-When-handling-FEAT-command-check-ssl_tlsv1_1-and-ssl.patch
-Patch43:                        0043-Enable-only-TLSv1.2-by-default.patch
+# Patch43:                      0043-Enable-only-TLSv1.2-by-default.patch
 Patch44:                        0044-Disable-anonymous_enable-in-default-config-file.patch
 Patch45:                        0045-Expand-explanation-of-ascii_-options-behaviour-in-ma.patch
 Patch46:                        0046-vsftpd.conf-Refer-to-the-man-page-regarding-the-asci.patch
