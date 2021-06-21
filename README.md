@@ -8,6 +8,7 @@
 
 ```
 $ dnf copr enable pkgstore/vsftpd
+$ dnf install -y vsftpd
 ```
 
 ### Open Build Service (OBS)
