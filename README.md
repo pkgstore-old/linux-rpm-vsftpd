@@ -23,6 +23,13 @@ $ dnf install -y vsftpd
 $ dnf upgrade -y vsftpd
 ```
 
+## Remove
+
+```
+$ dnf erase -y vsftpd
+$ dnf copr remove pkgstore/vsftpd
+```
+
 ## How to Build
 
 1. Get source from [src.fedoraproject.org](https://src.fedoraproject.org/rpms/vsftpd).
