@@ -263,15 +263,6 @@ LINK="-pie -lssl" %{?_smp_mflags}
 * Fri Mar 13 2020 Package Store <kitsune.solar@gmail.com> - 3.0.3-102
 - UPD: master-9d90ef.
 
-* Thu Oct 03 2019 Package Store <kitsune.solar@gmail.com> - 3.0.3-101
-- UPD: master-6848e2.
-
-* Sat Jun 29 2019 Package Store <kitsune.solar@gmail.com> - 3.0.3-100
-- UPD: MARKETPLACE.
-
-* Mon Mar 25 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-32
-- UPD: Reconfigure SSL generator.
-
 * Thu Feb 13 2020 Ondřej Lysoněk <olysonek@redhat.com> - 3.0.3-37
 - Fix timestamp handling in MDTM
 - Resolves: rhbz#1567855
@@ -285,6 +276,15 @@ LINK="-pie -lssl" %{?_smp_mflags}
 
 * Fri Jan 17 2020 Tom Stellard <tstellar@redhat.com> - 3.0.3-34
 - Use make_build macro
+
+* Thu Oct 03 2019 Package Store <kitsune.solar@gmail.com> - 3.0.3-101
+- UPD: master-6848e2.
+
+* Sat Jun 29 2019 Package Store <kitsune.solar@gmail.com> - 3.0.3-100
+- UPD: MARKETPLACE.
+
+* Mon Mar 25 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-32
+- UPD: Reconfigure SSL generator.
 
 * Fri Jan 04 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-31
 - UPD: Reconfigure SSL generator.
