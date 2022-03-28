@@ -2,7 +2,7 @@
 %global release_prefix          100
 
 Name:                           vsftpd
-Version:                        3.0.4
+Version:                        3.0.5
 Release:                        %{release_prefix}%{?dist}
 Summary:                        Very Secure Ftp Daemon
 # OpenSSL link exception.
@@ -108,6 +108,8 @@ Patch69:                        0001-Remove-a-hint-about-the-ftp_home_dir-SELinu
 # Patch70:                      fix-str_open.patch
 # Upstream commits 56402c0, 8b82e73.
 Patch71:                        vsftpd-3.0.3-enable_wc_logs-replace_unprintable_with_hex.patch
+Patch72:                        vsftpd-3.0.3-ALPACA.patch
+Patch73:                        vsftpd-3.0.3-option_to_disable_TLSv1_3.patch
 
 %description
 vsftpd is a Very Secure FTP daemon. It was written completely from
@@ -123,10 +125,13 @@ scratch.
 
 
 %build
+# Temporary ignore deprecated warnings to be able to build against OpenSSL 3.0.
+%define ignore_deprecated -Wno-deprecated-declarations
+
 %ifarch s390x sparcv9 sparc64
-  %{make_build} CFLAGS="${RPM_OPT_FLAGS} -fPIE -pipe -Wextra -Werror" \
+  %{make_build} CFLAGS="${RPM_OPT_FLAGS} -fPIE -pipe -Wextra -Werror %{ignore_deprecated}" \
 %else
-  %{make_build} CFLAGS="${RPM_OPT_FLAGS} -fpie -pipe -Wextra -Werror" \
+  %{make_build} CFLAGS="${RPM_OPT_FLAGS} -fpie -pipe -Wextra -Werror %{ignore_deprecated}" \
 %endif
 LINK="-pie -lssl" %{?_smp_mflags}
 
@@ -200,6 +205,31 @@ LINK="-pie -lssl" %{?_smp_mflags}
 
 
 %changelog
+* Mon Mar 28 2022 Package Store <mail@z17.dev> - 3.0.5-100
+- NEW: vsftpd v3.0.5.
+
+* Sat Jan 22 2022 Fedora Release Engineering <releng@fedoraproject.org> - 3.0.3-50
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
+* Wed Oct 27 2021 Artem Egorenkov <aegorenk@redhat.com> - 3.0.3-49
+- add option to disable TLSv1.3
+- Resolves: rhbz#2017705
+
+* Wed Oct 13 2021 Artem Egorenkov <aegorenk@redhat.com> - 3.0.3-48
+- ALPACA fix backported from upstram 3.0.5 version
+- Resolves: rhbz#1975648
+
+* Wed Oct 13 2021 Artem Egorenkov <aegorenk@redhat.com> - 3.0.3-47
+- Temporary pass -Wno-deprecated-declarations to gcc to ignore
+  deprecated warnings to be able to build against OpenSSL-3.0
+- Resolves: rhbz#1962603
+
+* Tue Sep 14 2021 Sahana Prasad <sahana@redhat.com> - 3.0.3-46
+- Rebuilt with OpenSSL 3.0.0
+
+* Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 3.0.3-45
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Sat Jun 19 2021 Package Store <kitsune.solar@gmail.com> - 3.0.4-100
 - NEW: v3.0.4.
 - UPD: Move to Package Store.
@@ -242,6 +272,20 @@ LINK="-pie -lssl" %{?_smp_mflags}
 * Mon Mar 25 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-32
 - UPD: Reconfigure SSL generator.
 
+* Thu Feb 13 2020 Ondřej Lysoněk <olysonek@redhat.com> - 3.0.3-37
+- Fix timestamp handling in MDTM
+- Resolves: rhbz#1567855
+
+* Fri Feb 07 2020 Ondřej Lysoněk <olysonek@redhat.com> - 3.0.3-36
+- Fix build with gcc 10
+- Resolves: rhbz#1800239
+
+* Fri Jan 31 2020 Fedora Release Engineering <releng@fedoraproject.org> - 3.0.3-35
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
+* Fri Jan 17 2020 Tom Stellard <tstellar@redhat.com> - 3.0.3-34
+- Use make_build macro
+
 * Fri Jan 04 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-31
 - UPD: Reconfigure SSL generator.
 
@@ -251,6 +295,25 @@ LINK="-pie -lssl" %{?_smp_mflags}
 
 * Thu Jan 03 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-29
 - UPD: METADATA.
+
+* Thu Nov 28 2019 Ondřej Lysoněk <olysonek@redhat.com> - 3.0.3-33
+- Finish up the fix to the problem with bad utmp entries when pututxline() fails
+- Resolves: rhbz#1688852
+- Resolves: rhbz#1737433
+
+* Mon Aug 05 2019 Ondřej Lysoněk <olysonek@redhat.com> - 3.0.3-32
+- Partially fix problem with bad utmp entries when pututxline() fails
+- Resolves: rhbz#1688848
+
+* Sat Aug 03 2019 Ondřej Lysoněk <olysonek@redhat.com> - 3.0.3-31
+- Fix segfault when listen() returns an error
+- Resolves: rhbz#1666380
+
+* Sat Jul 27 2019 Fedora Release Engineering <releng@fedoraproject.org> - 3.0.3-30
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
+* Sun Feb 03 2019 Fedora Release Engineering <releng@fedoraproject.org> - 3.0.3-29
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
 
 * Wed Jul 25 2018 Ondřej Lysoněk <olysonek@redhat.com> - 3.0.3-28
 - Rebuilt, switched to SHA512 source tarball hash

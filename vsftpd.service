@@ -4,7 +4,6 @@ After=network-online.target
 
 [Service]
 Type=forking
-ExecStartPre=/usr/libexec/vsftpd-ssl-gencerts
 ExecStart=/usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf
 
 [Install]
