@@ -108,7 +108,7 @@ Patch69:                        0001-Remove-a-hint-about-the-ftp_home_dir-SELinu
 # Patch70:                      fix-str_open.patch
 # Upstream commits 56402c0, 8b82e73.
 Patch71:                        vsftpd-3.0.3-enable_wc_logs-replace_unprintable_with_hex.patch
-Patch72:                        vsftpd-3.0.3-ALPACA.patch
+# Patch72:                      vsftpd-3.0.3-ALPACA.patch
 Patch73:                        vsftpd-3.0.3-option_to_disable_TLSv1_3.patch
 
 %description
@@ -260,9 +260,6 @@ LINK="-pie -lssl" %{?_smp_mflags}
 - Removed a hint about the ftp_home_dir SELinux boolean from the config file
 - Resolves: rhbz#1623424
 
-* Fri Mar 13 2020 Package Store <kitsune.solar@gmail.com> - 3.0.3-102
-- UPD: master-9d90ef.
-
 * Thu Feb 13 2020 Ondřej Lysoněk <olysonek@redhat.com> - 3.0.3-37
 - Fix timestamp handling in MDTM
 - Resolves: rhbz#1567855
@@ -276,25 +273,6 @@ LINK="-pie -lssl" %{?_smp_mflags}
 
 * Fri Jan 17 2020 Tom Stellard <tstellar@redhat.com> - 3.0.3-34
 - Use make_build macro
-
-* Thu Oct 03 2019 Package Store <kitsune.solar@gmail.com> - 3.0.3-101
-- UPD: master-6848e2.
-
-* Sat Jun 29 2019 Package Store <kitsune.solar@gmail.com> - 3.0.3-100
-- UPD: MARKETPLACE.
-
-* Mon Mar 25 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-32
-- UPD: Reconfigure SSL generator.
-
-* Fri Jan 04 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-31
-- UPD: Reconfigure SSL generator.
-
-* Thu Jan 03 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-30
-- ADD: SSL generator.
-- UPD: SPEC-file.
-
-* Thu Jan 03 2019 Kitsune Solar <kitsune.solar@gmail.com> - 3.0.3-29
-- UPD: METADATA.
 
 * Thu Nov 28 2019 Ondřej Lysoněk <olysonek@redhat.com> - 3.0.3-33
 - Finish up the fix to the problem with bad utmp entries when pututxline() fails
