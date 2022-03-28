@@ -109,7 +109,7 @@ Patch69:                        0001-Remove-a-hint-about-the-ftp_home_dir-SELinu
 # Upstream commits 56402c0, 8b82e73.
 Patch71:                        vsftpd-3.0.3-enable_wc_logs-replace_unprintable_with_hex.patch
 # Patch72:                      vsftpd-3.0.3-ALPACA.patch
-Patch73:                        vsftpd-3.0.3-option_to_disable_TLSv1_3.patch
+# Patch73:                      vsftpd-3.0.3-option_to_disable_TLSv1_3.patch
 
 %description
 vsftpd is a Very Secure FTP daemon. It was written completely from
