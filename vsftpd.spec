@@ -1,5 +1,5 @@
 %global _generatorsdir          %{_prefix}/lib/systemd/system-generators
-%global release_prefix          100
+%global release_prefix          1000
 
 Name:                           vsftpd
 Version:                        3.0.5
@@ -8,24 +8,20 @@ Summary:                        Very Secure Ftp Daemon
 # OpenSSL link exception.
 License:                        GPLv2 with exceptions
 URL:                            https://security.appspot.com/vsftpd.html
-Vendor:                         Package Store <https://pkgstore.github.io>
-Packager:                       Kitsune Solar <kitsune.solar@gmail.com>
 
-Source0:                        https://security.appspot.com/downloads/%{name}-%{version}.tar.gz
-Source1:                        vsftpd.xinetd
-Source2:                        vsftpd.pam
-Source3:                        vsftpd.ftpusers
-Source4:                        vsftpd.user_list
-Source6:                        vsftpd_conf_migrate.sh
-Source7:                        vsftpd.service
-Source8:                        vsftpd@.service
-Source9:                        vsftpd.target
-Source10:                       vsftpd-generator
-# Signature.
-Source900:                      https://security.appspot.com/downloads/%{name}-%{version}.tar.gz.asc
+Source0:                        %{name}-%{version}.tar.xz
+Source1:                        %{name}.xinetd
+Source2:                        %{name}.pam
+Source3:                        %{name}.ftpusers
+Source4:                        %{name}.user_list
+Source6:                        %{name}_conf_migrate.sh
+Source7:                        %{name}.service
+Source8:                        %{name}@.service
+Source9:                        %{name}.target
+Source10:                       %{name}-generator
 # SSL generator.
-Source920:                      vsftpd-ssl-pass-dialog
-Source921:                      vsftpd-ssl-gencerts
+Source920:                      %{name}-ssl-pass-dialog
+Source921:                      %{name}-ssl-gencerts
 
 BuildRequires:                  make
 BuildRequires:                  pam-devel
@@ -205,7 +201,11 @@ LINK="-pie -lssl" %{?_smp_mflags}
 
 
 %changelog
-* Mon Mar 28 2022 Package Store <mail@z17.dev> - 3.0.5-100
+* Thu Mar 31 2022 Package Store <pkgstore@mail.ru> - 3.0.5-1000
+- UPD: Rebuild by Package Store.
+- UPD: File "vsftpd.spec".
+
+* Mon Mar 28 2022 Package Store <pkgstore@mail.ru> - 3.0.5-100
 - NEW: vsftpd v3.0.5.
 
 * Sat Jan 22 2022 Fedora Release Engineering <releng@fedoraproject.org> - 3.0.3-50
@@ -229,11 +229,6 @@ LINK="-pie -lssl" %{?_smp_mflags}
 
 * Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 3.0.3-45
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
-
-* Sat Jun 19 2021 Package Store <kitsune.solar@gmail.com> - 3.0.4-100
-- NEW: v3.0.4.
-- UPD: Move to Package Store.
-- UPD: License.
 
 * Thu Apr 8 2021 Artem Egorenkov <aegorenk@redhat.com> - 3.0.3-44
 - Enable support for wide-character strings in logs
